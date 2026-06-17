@@ -168,7 +168,21 @@
 
 /obj/item/organ/internal/heart/gland/pop/trigger()
 	to_chat(owner, SPAN_NOTICE("You feel unlike yourself."))
-	var/species = pick(/datum/species/unathi, /datum/species/skrell, /datum/species/diona, /datum/species/tajaran, /datum/species/vulpkanin, /datum/species/kidan, /datum/species/grey)
+	var/species = pick(list(
+		/datum/species/human,
+		/datum/species/tajaran,
+		/datum/species/unathi,
+		/datum/species/skrell,
+		/datum/species/slime,
+		/datum/species/vox,
+		/datum/species/drask,
+		/datum/species/grey,
+		/datum/species/diona,
+		/datum/species/kidan,
+		/datum/species/vulpkanin,
+		/datum/species/moth,
+		/datum/species/skulk,
+		/datum/species/machine))
 	owner.set_species(species, keep_missing_bodyparts = TRUE)
 
 /obj/item/organ/internal/heart/gland/ventcrawling
